@@ -1,0 +1,52 @@
+﻿@{
+    ViewBag.Title = "MainMenu";
+}
+
+<link href="@Url.Content("~/Content/Menu.css")" rel="stylesheet" type="text/css" />
+
+<td class="contenedorMenu">
+    <h2>Menu</h2>
+
+
+
+
+    <ul class="menu">
+        <li>
+            <a id="goToHome" href="/">INICIO</a>
+        </li>
+        <li>
+            <a href="">ADMINISTRACION</a>
+            <ul>
+                <li>
+                    <a id="goToUsuarios" href="/Administracion/Usuarios">Usuarios</a>
+                </li>
+                <li>
+                    <a id="goToMunicipios" href="/Administracion/Municipios">Municipios</a>
+                </li>
+                <li>
+                    <a href="">Submenu pendiente</a>
+                    <ul>
+                        <li><a href="">Opcion 1</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <a href="">UNIVERSIDAD</a>
+            <ul>
+                <li>
+                    <a id="goToEstudiantes" href="/Universidad/Estudiantes">Estudiantes</a>
+                </li>
+            </ul>
+        </li>
+
+        <li>
+            <a href="">Reportes</a>
+            <ul>
+                <li>
+                    <a id="goToReporte" href="/Reporte/Reporte1">Reporte #1</a>
+                </li>
+            </ul>
+        </li>
+    </ul>
+</td>

@@ -1,0 +1,59 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> .NET + AJAX + A LA MEDIDA</title>
+
+    <!-- Archivos adicionales -->    
+    <link href="@Url.Content("~/Content/General.css")" rel="stylesheet" type="text/css" />
+    <script src="@Url.Content("~/Scripts/General/JQuery.js")" type="text/javascript"></script>
+</head>
+
+
+<body>
+
+    <!--SE DEFINE VARIABLE DE SESION, PARA SABER SI SE ESTA ACTIVO O NO-->
+    @{bool hasSession = ((HttpContext.Current.Session.Count > 0) ? true : false);}
+
+
+    @*TOP BANNER*@
+
+    @{if (hasSession)
+    {
+        Html.RenderPartial("TopBanner");
+        Html.RenderPartial("SessionBar");
+    }
+    
+    }
+
+
+    @*CONTENT AND MENU*@
+
+    <!--Se valida si se ha iniciado sesion para añadir o no la clase especificada-->
+    <table @((hasSession) ? Html.Raw("class='contenido'") : Html.Raw(""))>
+        <tr>
+            @{if (hasSession)
+            {
+                Html.RenderPartial("MainMenu");
+            }
+            else
+            {
+                Html.RenderPartial("LogIn");
+            }
+            }
+
+            <td>
+                @*CONTENIDO PRINCIPAL*@
+                @RenderBody()
+            </td>
+        </tr>
+    </table>
+              
+    @*FOOTER*@
+    @{Html.RenderPartial("Footer");}
+
+
+</body>
+</html>

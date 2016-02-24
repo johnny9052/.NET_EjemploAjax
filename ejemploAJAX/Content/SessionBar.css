@@ -1,0 +1,18 @@
+﻿body {
+
+}
+
+.sessionBar, .sessionTabla{
+    width:100%;
+    height : 30px;
+    background-color: #aeb5db
+}
+
+.sessionUsuario{
+    text-align: left;
+}
+
+
+.sessionLogOut{
+    text-align: right;
+}

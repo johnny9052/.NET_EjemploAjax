@@ -1,0 +1,16 @@
+﻿body {
+
+}
+
+
+/*Bordes separadores de la tabla*/
+.contenedorMenu{
+    border: 1px solid black;
+    width: 200px;
+    height: 350px;
+}
+
+
+.menu{
+    text-align: left;
+}

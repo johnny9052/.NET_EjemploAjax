@@ -1,0 +1,30 @@
+﻿.LoginTitulo {
+    font-size: 35px;
+    font-family: Tahoma;
+    color: #1d4000;
+    font-weight: bold;
+    margin-top: 10%;
+}
+
+
+/* Estilo para el campo de texto del login */
+.LoginContenedor {
+    border: 1px solid #000000;
+    margin: auto;
+    vertical-align: middle;
+    margin-bottom: 1%;
+    margin-top: 1%;
+}
+
+/* Estilo para la tabla del login */
+.LoginContenedor td {
+    padding: 10px;
+}
+
+
+.LoginTextField {
+    border: 2px double #CFCFCF;
+    height: 22px;
+    width: 200px;
+    font-size: 18px;
+}

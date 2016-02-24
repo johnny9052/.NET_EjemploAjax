@@ -1,0 +1,57 @@
+﻿@{
+    ViewBag.Title = "Usuarios";
+}
+
+
+<script defer src="@Url.Content("~/Scripts/System/Administracion/Usuarios.js")" type="text/javascript"></script>
+
+<table class="contenedorContenido">
+
+    <tr>
+        <td>
+            <h2>Usuarios</h2>
+        </td>
+    </tr>
+    <tr>
+        <td><input id="txtId" type="hidden" /></td>
+    </tr>
+
+    <tr>
+       <td>
+           <table>
+               <tr>
+                   <td>Nombre usuario</td>
+                   <td><input type="text" id="txtUsuario" /></td>
+                   <td>Password</td>
+                   <td><input type="password" id="txtPassword" /></td>
+               </tr>
+           </table>
+       </td>
+    </tr>
+    <tr>
+        <td>
+            <br />
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <input type="button" value="guardar" onclick="guardar();" />
+            <input type="button" value="buscar" onclick="buscar();" />
+            <input type="button" value="modificar" onclick="guardar();" />
+            <input type="button" value="eliminar" onclick="eliminar();" />
+            <input type="button" value="limpiar" onclick="limpiar();" />
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+            <br />
+        </td>
+    </tr>
+
+    <tr>
+        <td colspan="4">
+            <div id="listado"></div>
+        </td>
+    </tr>
+</table>

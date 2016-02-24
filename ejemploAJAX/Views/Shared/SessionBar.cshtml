@@ -1,0 +1,23 @@
+﻿
+@{
+    ViewBag.Title = "SessionBar";
+}
+
+<link href="@Url.Content("~/Content/SessionBar.css")" rel="stylesheet" type="text/css" />
+<script defer src="@Url.Content("~/Scripts/System/Security/Logout.js")" type="text/javascript"></script>
+
+
+
+
+<div class="sessionBar">
+    <table class="sessionTabla">
+        <tr>
+            <td class="sessionUsuario">
+                <strong> Bienvenido </strong> @Html.Raw(HttpContext.Current.Session["USER_NAME"].ToString())
+            </td>
+            <td class="sessionLogOut">
+                <input type="button" value="salir" onclick="LogOut();">
+            </td>
+        </tr>
+    </table>    
+</div>

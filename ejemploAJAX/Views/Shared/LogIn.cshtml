@@ -1,0 +1,38 @@
+﻿
+@{
+    ViewBag.Title = "LogIn";
+}
+
+
+<link href="@Url.Content("~/Content/Login.css")" rel="stylesheet" type="text/css" />
+<script defer src="@Url.Content("~/Scripts/System/Security/Login.js")" type="text/javascript"></script>
+
+
+<div class="LoginTitulo">
+    Identificaci&oacute;n de Usuarios
+</div>
+
+
+<table class="LoginContenedor">
+    <tr>
+        <td>
+            <strong>Usuario</strong>
+        </td>
+        <td>
+            <input type="text" id="txtUser" class="LoginTextField" value="admin"/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <strong>Clave</strong>
+        </td>
+        <td>
+            <input type="password" id="txtKey" class="LoginTextField" value="123"/>            
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2" align="center">
+            <input type="button" id="btnLogin" value="Iniciar Sesi&oacute;n"   onclick="validarUsuario();" />
+        </td>
+    </tr>
+</table>
